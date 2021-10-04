@@ -4,7 +4,7 @@
     android:color="#D32E2B2B"> <!-- Ripple color :: WHITE -->
 
     <item>
-        <color android:color="@color/purple_500" /> <!-- Normal bg color :: RED -->
+        <color android:color="@color/purple_500" /><!-- Normal bg color :: RED -->
     </item>
 
     <!-- Make sure the ripple doesn't exceed the bounds -->

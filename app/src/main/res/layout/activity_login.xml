@@ -9,26 +9,36 @@
     android:focusable="true"
     android:focusableInTouchMode="true">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loginanim_2" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="40dp"
         android:hint="Login using phone no"
+        android:layout_margin="40dp"
         android:textColorHint="@color/highlight"
         app:boxBackgroundColor="@color/dark_grey"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView"
         app:startIconDrawable="@drawable/ic_baseline_phone_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:fontFamily="@font/montserrat_light"/>
+            android:fontFamily="@font/montserrat_light"
+            android:inputType="phone" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -53,20 +63,21 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
         android:fontFamily="@font/montserrat_medium"
         android:text="Sign Up"
+        android:layout_marginRight="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/textField" />
+        app:layout_constraintTop_toTopOf="@+id/btn_login" />
 
     <Button
         android:id="@+id/btn_google"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:background="@color/purple_500"
+        android:background="@drawable/ripple_effect"
         android:fontFamily="@font/montserrat_regular"
         android:text="Google"
         android:textColor="@color/black"
@@ -79,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:background="@color/purple_500"
+        android:background="@drawable/ripple_effect"
         android:fontFamily="@font/montserrat_regular"
         android:text="Facebook"
         android:textColor="@color/black"
