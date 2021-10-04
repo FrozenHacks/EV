@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".LoginActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:hint="Login using phone no"
+        android:textColorHint="@color/highlight"
+        app:boxBackgroundColor="@color/dark_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_phone_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:fontFamily="@font/montserrat_light"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@drawable/ripple_effect"
+        android:text="Login"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/btn_signup"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textField" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Sign Up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/textField" />
+
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@color/purple_500"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Google"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/btn_signup"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <Button
+        android:id="@+id/btn_fb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@color/purple_500"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Facebook"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/btn_google"
+        app:layout_constraintStart_toStartOf="@+id/btn_google"
+        app:layout_constraintTop_toBottomOf="@+id/btn_google" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
