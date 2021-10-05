@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">EV</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="homeLat">1234567</string>
 </resources>

@@ -1,7 +1,9 @@
 package com.example.ev
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlinx.android.synthetic.main.activity_login.*
 
 
 class LoginActivity : AppCompatActivity() {
@@ -9,6 +11,17 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         supportActionBar?.hide()
+        btn_fb.isClickable= true
+        btn_fb.setOnClickListener {
+            nextpage()
+        }
+        btn_google.isClickable= true
+        btn_google.setOnClickListener {
+            nextpage()
+        }
+        btn_login.setOnClickListener {
+            nextpage()
+        }
 /*
         textField.setOnClickListener(this); // calling onClick() method
 
@@ -33,6 +46,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }*/
 
+    }
+
+    private fun nextpage() {
+        startActivity(Intent(application, MapsActivity::class.java))
     }
 }
 

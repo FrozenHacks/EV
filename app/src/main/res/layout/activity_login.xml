@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".LoginActivity"
     android:focusable="true"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    tools:context=".LoginActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26999998"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/loginanim_2" />
@@ -25,8 +26,8 @@
         android:id="@+id/textField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Login using phone no"
         android:layout_margin="40dp"
+        android:hint="Login using phone no"
         android:textColorHint="@color/highlight"
         app:boxBackgroundColor="@color/dark_grey"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,15 +48,16 @@
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp"
         android:background="@drawable/ripple_effect"
-        android:text="Login"
         android:fontFamily="@font/montserrat_medium"
+        android:text="Login"
         android:textColor="@color/black"
         app:layout_constraintEnd_toStartOf="@+id/btn_signup"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textField"
         app:layout_constraintTop_toBottomOf="@+id/textField" />
 
     <Button
@@ -65,38 +67,54 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_medium"
         android:text="Sign Up"
-        android:layout_marginRight="40dp"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_login"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textField"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_login"
         app:layout_constraintTop_toTopOf="@+id/btn_login" />
 
-    <Button
-        android:id="@+id/btn_google"
+    <TextView
+        android:id="@+id/txt_morelogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:background="@drawable/ripple_effect"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="Google"
-        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_light"
+        android:gravity="center"
+        android:text="Or Login with"
+        android:textColor="@color/highlight"
         app:layout_constraintEnd_toEndOf="@+id/btn_signup"
         app:layout_constraintStart_toStartOf="@+id/btn_login"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
-    <Button
+    <ImageView
         android:id="@+id/btn_fb"
-        android:layout_width="match_parent"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
-        android:background="@drawable/ripple_effect"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="Facebook"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/btn_google"
-        app:layout_constraintStart_toStartOf="@+id/btn_google"
-        app:layout_constraintTop_toBottomOf="@+id/btn_google" />
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/fb_bg"
+        android:padding="8dp"
+        android:src="@drawable/fb"
+        app:layout_constraintEnd_toStartOf="@+id/btn_google"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/txt_morelogin"
+        app:layout_constraintTop_toBottomOf="@+id/txt_morelogin" />
+
+    <ImageView
+        android:id="@+id/btn_google"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/google"
+        android:padding="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:src="@drawable/google_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_fb"
+        app:layout_constraintEnd_toEndOf="@+id/txt_morelogin"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_fb"
+        app:layout_constraintTop_toTopOf="@+id/btn_fb" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

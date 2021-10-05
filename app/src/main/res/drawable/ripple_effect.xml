@@ -12,5 +12,7 @@
         <shape android:shape="rectangle">
             <solid android:color="?android:colorAccent" />
         </shape>
+
     </item>
+
 </ripple>
